@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/dialog">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/okUpdate"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="5dp"
+            android:background="#00FFFFFF"
+            android:onClick="okUpdate"
+            android:text="ok"
+            android:textColor="#0023FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/closeUpdate"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:background="#00FFFFFF"
+            android:onClick="closeUpdate"
+            android:text="annulla"
+            android:textColor="#0024FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#43A047"
+            android:ems="10"
+            android:inputType="date|textAutoComplete"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/orizontalLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/domandaUpdate" />
+
+        <EditText
+            android:id="@+id/editTextTime"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#43A047"
+            android:ems="10"
+            android:inputType="time"
+            android:textAlignment="center"
+            android:textColorLink="#43A047"
+            app:layout_constraintBottom_toTopOf="@+id/orizontalLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/domandaUpdate" />
+
+        <TextView
+            android:id="@+id/attenzioneUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/attenzione"
+            android:backgroundTint="#43A047"
+            android:text="Attenzione"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/domandaUpdate"
+            android:layout_width="304dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Vuoi modificare data oppure ora?"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/attenzioneUpdate" />
+
+        <View
+            android:id="@+id/orizontalLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/closeUpdate"
+            tools:layout_editor_absoluteX="41dp" />
+
+        <View
+            android:id="@+id/verticallLine"
+            android:layout_width="1dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/okUpdate"
+            app:layout_constraintStart_toEndOf="@+id/closeUpdate" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/dialog_delete">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_delete">
+
+        <Button
+            android:id="@+id/okDelete"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:background="#00FFFFFF"
+            android:onClick="okDelete"
+            android:text="ok"
+            android:textColor="#0024FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/domandaDelete" />
+
+        <Button
+            android:id="@+id/closeDelete"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="5dp"
+            android:background="#00FFFFFF"
+            android:onClick="closeDelete"
+            android:text="Annulla"
+            android:textColor="#0024FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewAttenzione"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/attenzione"
+            android:text="Attenzione"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="148dp" />
+
+        <TextView
+            android:id="@+id/domandaDelete"
+            android:layout_width="317dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:text="Vuoi eliminare l appuntamento?"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAttenzione" />
+
+        <View
+            android:id="@+id/orizontalLineDelete"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/domandaDelete"
+            tools:layout_editor_absoluteX="150dp" />
+
+        <View
+            android:id="@+id/verticalLineDelete"
+            android:layout_width="1dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/okDelete"
+            app:layout_constraintStart_toEndOf="@+id/closeDelete" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
